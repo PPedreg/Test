@@ -31,7 +31,7 @@ class CalculatorTest {
 		calculator.add(91.25);
 		int newSize = originalSize + 3;
 		//assertEquals(newSize, calculator.numbers.size());
-		assertEquals(newSize, calculator.numbers.size(), "Verifies that the size of the vector has incresed the same amount as values added");
+		assertEquals(newSize, calculator.numbers.size(), "The size of the vector: " + calculator.numbers.size() + " is not the same as the expected size: " + newSize);
 	}
 
 	@Test
