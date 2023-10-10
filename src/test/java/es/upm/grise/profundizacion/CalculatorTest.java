@@ -31,7 +31,7 @@ class CalculatorTest {
 		calculator.add(91.25);
 		int newSize = originalSize + 3;
 		//assertEquals(newSize, calculator.numbers.size());
-		assertEquals(newSize, calculator.numbers.size(), "The size of the vector: " + calculator.numbers.size() + " is not the same as the expected size: " + newSize);
+		assertEquals("The size of the vector: " + calculator.numbers.size() + " is not the same as the expected size: " + newSize ,newSize, calculator.numbers.size());
 	}
 
 	@Test
@@ -41,14 +41,14 @@ class CalculatorTest {
 		int lastIndex = calculator.numbers.lastIndexOf(value);
 		calculator.remove(value);
 		assertTrue(calculator.numbers.contains(value), "There are still one more index of the value removed");
-		assertNotEquals(lastIndex, calculator.numbers.lastIndexOf(value), "That existing index is different from the original last index that has been removed");
+		assertNotEquals("That existing index is different from the original last index that has been removed", lastIndex, calculator.numbers.lastIndexOf(value));
 	}
 
 	@Test
 	@DisplayName("Testing max method: Existing max value")
 	public void alreadyExistingMaxValue () {
 		double max = 9;
-		assertEquals(max, calculator.max(), "The value is the max from all the collection");
+		assertEquals("The value is the max from all the collection", max, calculator.max());
 	}
 
 	@Test
